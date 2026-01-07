@@ -1,0 +1,18 @@
+{
+    "title": "Nginx WordPress Metrics",
+    "panels": [
+      {
+        "type": "stat",
+        "title": "Total Requests",
+        "targets": [
+          {
+            "expr": "nginx_requests_total",
+            "refId": "A"
+          }
+        ]
+      }
+    ],
+    "schemaVersion": 36,
+    "version": 1
+  }
+  

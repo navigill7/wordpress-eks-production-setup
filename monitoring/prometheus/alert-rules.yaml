@@ -1,0 +1,8 @@
+groups:
+- name: nginx-alerts
+  rules:
+  - alert: High5xxErrors
+    expr: nginx_requests_total > 100
+    for: 1m
+    labels:
+      severity: warning
