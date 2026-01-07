@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # WordPress on EKS - Production Setup
 
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-1.31-blue)](https://kubernetes.io/)
@@ -7,7 +6,8 @@ cat > README.md <<'EOF'
 
 Complete production-grade WordPress deployment on Amazon EKS with monitoring and alerting.
 
-![WordPress Architecture](screenshots/04-wordpress-running.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/463eb203-d7d6-4ee0-a948-45df16955bad" />
+
 
 ## 📋 Table of Contents
 
@@ -33,6 +33,7 @@ This project demonstrates a production-ready WordPress deployment on AWS EKS tha
 
 ## 🏗️ Architecture
 
+<img width="1066" height="797" alt="image" src="https://github.com/user-attachments/assets/b07c40a2-9096-4c3e-859b-af33a421cd9e" />
 
 
 ## ✨ Features
@@ -71,7 +72,7 @@ This project demonstrates a production-ready WordPress deployment on AWS EKS tha
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/wordpress-eks-production-setup.git
+git clone https://github.com/navigill7/wordpress-eks-production-setup.git
 cd wordpress-eks-production-setup
 ```
 
@@ -183,27 +184,25 @@ wordpress-eks-production-setup/
 - **HighPodMemory**: Fires when memory > 80% for 5 minutes
 - **PodRestarting**: Fires when pods restart unexpectedly
 
-![Grafana Dashboard](screenshots/09-grafana-wordpress-dashboard.png)
-
 ## 📸 Screenshots
 
 ### 1. EKS Cluster
-![EKS Nodes](screenshots/01-eks-cluster-nodes.png)
+![EKS Nodes](ScreenShots/01-eks-cluster-nodes.png)
 
 ### 2. Storage Configuration
-![PVC Status](screenshots/02-storage-pvc.png)
+![PVC Status](ScreenShots/02-storage-pvc.png)
 
 ### 3. Running Pods
-![Pods Running](screenshots/03-running-pods-services.png)
+![Pods Running](ScreenShots/03-running-pods-services.png)
 
 ### 4. WordPress Application
-![WordPress Running](screenshots/04-wordpress-running.png)
+![WordPress Running](ScreenShots/04-wordpress-running.png)
 
 ### 5. Prometheus Targets
-![Prometheus Targets](screenshots/06-prometheus-targets.png)
+![Prometheus Targets](ScreenShots/06-prometheus-targets.png)
 
 ### 6. Grafana Monitoring
-![Grafana Dashboard](screenshots/07-grafana-cluster-dashboard.png)
+![Grafana Dashboard](ScreenShots/07-grafana-cluster-dashboard.png)
 
 ## 🧪 Testing
 
@@ -270,19 +269,12 @@ Monthly costs (us-east-1 region):
 
 This is an assignment project. For issues or questions, please open an issue.
 
-## 📝 License
-
-MIT License
-
 ## 👤 Author
 
-**Your Name**  
-DevOps Engineer Intern Assignment - Syfe 2022
+Navinder 
+DevOps Engineer Intern Assignment - Syfe
 
 ---
 
-**Repository**: [GitHub Link]  
-**Assignment**: Syfe Infrastructure Intern - 2022
-EOF
-
-echo "✅ README.md created"
+**Repository**: https://github.com/navigill7/wordpress-eks-production-setup
+**Assignment**: Syfe Infrastructure Intern 
