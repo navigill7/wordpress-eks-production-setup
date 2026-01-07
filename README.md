@@ -1,4 +1,3 @@
-cat > README.md <<'EOF'
 # WordPress on EKS - Production Setup
 
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-1.31-blue)](https://kubernetes.io/)
@@ -33,6 +32,7 @@ This project demonstrates a production-ready WordPress deployment on AWS EKS tha
 
 ## 🏗️ Architecture
 
+<img width="1066" height="797" alt="image" src="https://github.com/user-attachments/assets/b07c40a2-9096-4c3e-859b-af33a421cd9e" />
 
 
 ## ✨ Features
