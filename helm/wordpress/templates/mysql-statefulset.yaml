@@ -1,31 +1,30 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: mysql
 spec:
-  serviceName: mysql
   replicas: 1
   selector:
-    matchLabels: { app: mysql }
+    matchLabels: 
+      app: mysql
   template:
     metadata:
-      labels: { app: mysql }
+      labels: 
+        app: mysql
     spec:
       containers:
       - name: mysql
         image: {{ .Values.images.mysql }}
+        ports:
+        - containerPort: 3306
+          name: mysql
         envFrom:
         - secretRef:
             name: mysql-secret
         volumeMounts:
-        - mountPath: /var/lib/mysql
-          name: data
-  volumeClaimTemplates:
-  - metadata:
-      name: data
-    spec:
-      accessModes: [ReadWriteMany]
-      storageClassName: {{ .Values.storage.className }}
-      resources:
-        requests:
-          storage: {{ .Values.storage.size }}
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-storage
+        persistentVolumeClaim:
+          claimName: mysql-pvc

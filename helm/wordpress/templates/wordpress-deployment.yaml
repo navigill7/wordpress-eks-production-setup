@@ -5,14 +5,19 @@ metadata:
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
-    matchLabels: { app: wordpress }
+    matchLabels: 
+      app: wordpress
   template:
     metadata:
-      labels: { app: wordpress }
+      labels: 
+        app: wordpress
     spec:
       containers:
       - name: wordpress
         image: {{ .Values.images.wordpress }}
+        ports:
+        - containerPort: 80
+          name: http
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql
@@ -31,3 +36,10 @@ spec:
             secretKeyRef:
               name: mysql-secret
               key: MYSQL_PASSWORD
+        volumeMounts:
+        - name: wordpress-storage
+          mountPath: /var/www/html
+      volumes:
+      - name: wordpress-storage
+        persistentVolumeClaim:
+          claimName: wp-pvc

@@ -1,10 +1,16 @@
 replicaCount: 2
 
 images:
-  wordpress: wordpress-custom
-  mysql: mysql-custom
-  nginx: nginx-openresty
+  wordpress: ${ECR_REGISTRY}/wordpress-custom:latest
+  mysql: ${ECR_REGISTRY}/mysql-custom:latest
+  nginx: ${ECR_REGISTRY}/nginx-openresty:latest
 
 storage:
   className: efs-sc
   size: 5Gi
+
+mysql:
+  database: wordpress
+  user: wpuser
+  password: Navinfo123!
+  rootPassword: Rootinfo123!
