@@ -184,27 +184,27 @@ wordpress-eks-production-setup/
 - **HighPodMemory**: Fires when memory > 80% for 5 minutes
 - **PodRestarting**: Fires when pods restart unexpectedly
 
-![Grafana Dashboard](screenshots/09-grafana-wordpress-dashboard.png)
+![Grafana Dashboard](ScreenShots/09-grafana-wordpress-dashboard.png)
 
 ## 📸 Screenshots
 
 ### 1. EKS Cluster
-![EKS Nodes](screenshots/01-eks-cluster-nodes.png)
+![EKS Nodes](ScreenShots/01-eks-cluster-nodes.png)
 
 ### 2. Storage Configuration
-![PVC Status](screenshots/02-storage-pvc.png)
+![PVC Status](ScreenShots/02-storage-pvc.png)
 
 ### 3. Running Pods
-![Pods Running](screenshots/03-running-pods-services.png)
+![Pods Running](ScreenShots/03-running-pods-services.png)
 
 ### 4. WordPress Application
-![WordPress Running](screenshots/04-wordpress-running.png)
+![WordPress Running](ScreenShots/04-wordpress-running.png)
 
 ### 5. Prometheus Targets
-![Prometheus Targets](screenshots/06-prometheus-targets.png)
+![Prometheus Targets](ScreenShots/06-prometheus-targets.png)
 
 ### 6. Grafana Monitoring
-![Grafana Dashboard](screenshots/07-grafana-cluster-dashboard.png)
+![Grafana Dashboard](ScreenShots/07-grafana-cluster-dashboard.png)
 
 ## 🧪 Testing
 
@@ -271,19 +271,12 @@ Monthly costs (us-east-1 region):
 
 This is an assignment project. For issues or questions, please open an issue.
 
-## 📝 License
-
-MIT License
-
 ## 👤 Author
 
-**Your Name**  
-DevOps Engineer Intern Assignment - Syfe 2022
+**Your Name**  Navinder 
+DevOps Engineer Intern Assignment - Syfe
 
 ---
 
-**Repository**: [GitHub Link]  
-**Assignment**: Syfe Infrastructure Intern - 2022
-EOF
-
-echo "✅ README.md created"
+**Repository**: https://github.com/navigill7/wordpress-eks-production-setup
+**Assignment**: Syfe Infrastructure Intern 
