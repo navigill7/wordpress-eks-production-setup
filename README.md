@@ -271,7 +271,7 @@ This is an assignment project. For issues or questions, please open an issue.
 
 ## 👤 Author
 
-**Your Name**  Navinder 
+Navinder 
 DevOps Engineer Intern Assignment - Syfe
 
 ---
