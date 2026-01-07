@@ -184,8 +184,6 @@ wordpress-eks-production-setup/
 - **HighPodMemory**: Fires when memory > 80% for 5 minutes
 - **PodRestarting**: Fires when pods restart unexpectedly
 
-![Grafana Dashboard](ScreenShots/09-grafana-wordpress-dashboard.png)
-
 ## 📸 Screenshots
 
 ### 1. EKS Cluster
