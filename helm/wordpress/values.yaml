@@ -1,9 +1,9 @@
 replicaCount: 2
 
 images:
-  wordpress: ${ECR_REGISTRY}/wordpress-custom:latest
-  mysql: ${ECR_REGISTRY}/mysql-custom:latest
-  nginx: ${ECR_REGISTRY}/nginx-openresty:latest
+  wordpress: 905418351204.dkr.ecr.us-east-1.amazonaws.com/wordpress-custom:latest
+  mysql: 905418351204.dkr.ecr.us-east-1.amazonaws.com/mysql-custom:latest
+  nginx: 905418351204.dkr.ecr.us-east-1.amazonaws.com/nginx-openresty:latest
 
 storage:
   className: efs-sc
@@ -14,3 +14,8 @@ mysql:
   user: wpuser
   password: Navinfo123!
   rootPassword: Rootinfo123!
+
+nginx:
+  service:
+    type: LoadBalancer
+    port: 80
