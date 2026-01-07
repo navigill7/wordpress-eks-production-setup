@@ -5,7 +5,10 @@ metadata:
 provisioner: efs.csi.aws.com
 parameters:
   provisioningMode: efs-ap
-  fileSystemId: <>
-  directoryPerms: "750"
+  fileSystemId: ${EFS_ID}
+  directoryPerms: "700"
+  gidRangeStart: "1000"
+  gidRangeEnd: "2000"
+  basePath: "/wordpress"
 reclaimPolicy: Retain
 volumeBindingMode: Immediate
