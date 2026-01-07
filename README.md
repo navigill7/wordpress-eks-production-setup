@@ -6,7 +6,8 @@
 
 Complete production-grade WordPress deployment on Amazon EKS with monitoring and alerting.
 
-![WordPress Architecture](screenshots/04-wordpress-running.png)
+![WordPress Architecture](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/463eb203-d7d6-4ee0-a948-45df16955bad" />
+
 
 ## 📋 Table of Contents
 
