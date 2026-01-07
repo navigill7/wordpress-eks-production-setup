@@ -72,7 +72,7 @@ This project demonstrates a production-ready WordPress deployment on AWS EKS tha
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/wordpress-eks-production-setup.git
+git clone https://github.com/navigill7/wordpress-eks-production-setup.git
 cd wordpress-eks-production-setup
 ```
 
