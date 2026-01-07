@@ -1,0 +1,36 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: wordpress-alerts
+  labels:
+    release: prometheus
+spec:
+  groups:
+  - name: wordpress
+    rules:
+    - alert: HighPodCPU
+      expr: rate(container_cpu_usage_seconds_total{pod=~"wordpress.*|nginx.*|mysql.*"}[5m]) > 0.8
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        summary: "High CPU usage on {{ `{{` }} $labels.pod {{ `}}` }}"
+        description: "CPU usage is above 80%"
+
+    - alert: HighPodMemory
+      expr: (container_memory_usage_bytes{pod=~"wordpress.*|nginx.*|mysql.*"} / container_spec_memory_limit_bytes{pod=~"wordpress.*|nginx.*|mysql.*"}) > 0.8
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        summary: "High memory usage on {{ `{{` }} $labels.pod {{ `}}` }}"
+        description: "Memory usage is above 80%"
+
+    - alert: PodRestarting
+      expr: rate(kube_pod_container_status_restarts_total{pod=~"wordpress.*|nginx.*|mysql.*"}[15m]) > 0
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        summary: "Pod {{ `{{` }} $labels.pod {{ `}}` }} is restarting"
+        description: "Pod restarted {{ `{{` }} $value {{ `}}` }} times"
