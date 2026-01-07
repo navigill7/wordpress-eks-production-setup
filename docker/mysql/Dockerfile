@@ -1,4 +1,7 @@
 FROM mysql:8.0
 
+
+ENV MYSQL_INITDB_SKIP_TZINFO=1
+
 VOLUME /var/lib/mysql
 EXPOSE 3306
