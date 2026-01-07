@@ -4,6 +4,9 @@
 
 See the monitoring stack diagram here:
 
+<img width="931" height="776" alt="image" src="https://github.com/user-attachments/assets/e71e4211-947f-4c4d-a8e9-d96cd7e93510" />
+
+
 The flow is:
 - ServiceMonitor finds pods to scrape
 - Prometheus scrapes /metrics from nginx and cAdvisor from kubelets
